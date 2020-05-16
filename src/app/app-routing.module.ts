@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home/home.component';
 import { AuthGuard } from './auth.guard';
 
-
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {
@@ -16,7 +15,7 @@ const routes: Routes = [
         canActivate: [AuthGuard],
         data: {
           shouldBeLoggedIn: false,
-          otherRedirectTo: '/admin',
+          otherwiseRedirectTo: '/admin',
         }
       },
       {
