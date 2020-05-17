@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home/home.component';
 import { AuthGuard } from './auth.guard';
+import { AdminShellComponent } from './admin/admin-shell/admin-shell.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: 'admin',
+    component: AdminShellComponent,
     children: [
       {
         path: 'login',
